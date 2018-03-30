@@ -1,3 +1,6 @@
+// Asha's code
+// This page handles the signup/login/logout features
+
 $(document).ready(function(){
 
 	$("#signup-btn").on('click', function(event){

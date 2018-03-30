@@ -1,4 +1,7 @@
+// Asha's code
+
 $(document).ready(function(){
+	// create group button
 	$("#btn-create-grp").on('click', function(e){
 		e.preventDefault();
 		 var newGroup = {
@@ -19,7 +22,7 @@ $(document).ready(function(){
 			}
 		);
 	});
-
+	// join gourp button
 	$('.btn-join-grp').on('click', function(e){	
 		let userId = ($(this).attr('data-userId'));
 		let groupId = ($(this).attr('data-groupId'));
@@ -41,7 +44,7 @@ $(document).ready(function(){
 			location.reload();
 		});		
 	});
-
+	// go to group button
 	 $('.btn-goto-grp').on('click', function(e){	
 
 	 	let userId = ($(this).attr('data-userId'));
@@ -57,12 +60,9 @@ $(document).ready(function(){
 			console.log('Goto group!');
 			window.location.replace('/api/group/' + groupId + '/' + userId)
 	 	});
-
-	// 	// location.reload();
 	 });
-
+	 // updates group details
 	$('.btn-group-details').on('click', function(event) {
-		// event.preventDefault();
 		let time = $('#details-time').val();
 		let location = $('#details-location').val();
 		if (time.length === 0 || time === null || location.length === 0 || location === null) {
@@ -74,7 +74,7 @@ $(document).ready(function(){
 			console.log('Joined group!');
 		});
 	});
-
+	// search button
 	$('#btn-search').on('click', function(event){
 		event.preventDefault();
 

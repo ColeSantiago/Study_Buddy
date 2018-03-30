@@ -1,3 +1,5 @@
+// Cole's code
+
 $(function() {
 	// leave group button
 	$('#leave-group').on('click', function(event) {
@@ -28,7 +30,6 @@ $(function() {
 
 	// admin button to update/create group details
 	$('.create-details').on('click', function(event) {
-		// event.preventDefault();
 		let time = $('#details-time').val();
 		let location = $('#details-location').val();
 		if (time.length === 0 || time === null || location.length === 0 || location === null) {

@@ -48,11 +48,8 @@ module.exports = function(app){
 		            login_status : true
 		        }        
 		    }).then(function(results) {
-		        // res.render('dashboard', {"users" : results.length});
 		        res.render('dashboard', {"user" : loggedInUser , "total" : results.length});
 		    });
-
-	        // res.render('dashboard', {"user" : loggedInUser});
 	  	} else {
 		  	console.log("in else");
 		    res.redirect('/signin');

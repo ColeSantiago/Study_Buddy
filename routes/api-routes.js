@@ -267,7 +267,7 @@ router.get('/user/:id', function(req, res) {
     });
 });
 
-/*------------------------DISPLAY SPECIFIC GROUP (ASHA) -------------------------------*/
+/*------------------------DISPLAY SPECIFIC GROUP -------------------------------*/
 
 router.get('/api/group/:groupId/:userId', function(req, res) {
 
@@ -299,62 +299,6 @@ router.get('/api/group/:groupId/:userId', function(req, res) {
             });            
         });
 });
-
-
-/*------------------------Display specific group (COLE)--------------------------*/
-
-router.get('/group/:groupId/:userId', function(req, res) {
-    let userId = req.params.userId;
-    let groupId = req.params.groupId;
-    models.group_details.findAll({
-        where: { groupId: groupId }
-    }).then(function(details) {
-        models.user.findAll({
-            where: { id: userId }
-        }).then(function(user) {
-            models.group.findAll({
-                where: { id: groupId }
-            }).then(function(group) {
-                models.group_member.findAll( {
-                    where: { userId: userId,
-                             groupId: groupId 
-                            }
-                }).then(function(group_member) {
-                    models.group_member.findAll({
-                        where: { groupId: groupId }
-                    }).then(function(group_members) {
-                        models.group_member_message.findAll({
-                            where: { groupId: groupId }
-                            }).then(function(group_member_message) {
-                                if(group_member.length === 0) {
-                                    console.log('not a member');
-                                    res.render('details', {
-                                        details: details, 
-                                        user: user, 
-                                        group: group, 
-                                        group_member: false,
-                                        group_members: group_members,
-                                        group_member_message: group_member_message
-                                    });
-                                } else {
-                                     res.render('group', {
-                                        details: details, 
-                                        user: user, 
-                                        group: group, 
-                                        group_member: group_member,
-                                        group_members:group_members,
-                                        group_member_message: group_member_message,
-                                        is_joined: true
-                                    });
-                                 };
-                            });
-                        });   
-                    });
-                });
-            });
-        });
-    });
-
 
 /*------------------------CREATE GROUP -------------------------------------*/
 
