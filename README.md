@@ -55,7 +55,7 @@ ____________
 ### Development
 The database is made up of 5 tables associated through sequelize. The data is also pulled from the database with sequelize, utilizing Handlebars to template the HTML. A comnination of Bootstrap and custom CSS was used for styling.
 
-This website can be run on a node server with mySQL, or it can be found [here](heroku link here).
+This website can be run on a node server with mySQL, or it can be found [here](https://study-buddy-rcb.herokuapp.com/).
 
 ------------
 
