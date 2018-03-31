@@ -27,6 +27,8 @@
 
 When the application is first brought up, you are able to either sign in, or create an account with the sign up button.
 
+![login](https://raw.githubusercontent.com/ColeSantiago/Study_Buddy/master/public/assets/images/study-buddy-2.png)
+
 Once the user is logged in they are able to see all of the available *study groups* that others have created. They have the option of clicking a group to **read more** about it, **searching** for a group they are interested in, or they can **make** their own group.
 
 ### Clicking to read more about a group:
@@ -35,6 +37,8 @@ This will bring the user to the individual group page, where they have the optio
 If they join, the rest of page will appear, which will reveal the group chat that is available, all the group members and if they are currently online or not, and the time and location that the study group will mee up.
 
 The user also hase the option to leave the group.
+
+![group](https://raw.githubusercontent.com/ColeSantiago/Study_Buddy/master/public/assets/images/study-buddy.png)
 
 ### Making their own group
 
