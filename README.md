@@ -49,11 +49,15 @@ When the user makes their own group they become the admin of that group, where t
   *  They can update the time and location of the study group.
   *  They can choose to delete the group if they wish.
 
+  ![create](https://raw.githubusercontent.com/ColeSantiago/Study_Buddy/master/public/assets/images/study-buddy-3.png)
+
 ---------
 ## The user is also able to: 
 
 * View thier own profile, which will show thier info and the groups they are in.
 * View all of the groups they are admin of.
+
+![profile](https://raw.githubusercontent.com/ColeSantiago/Study_Buddy/master/public/assets/images/study-buddy-4.png)
 
 ____________ 
 ### Development
